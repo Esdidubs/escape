@@ -62,8 +62,10 @@ function buttons() {
 		event.preventDefault();
 		updateTry();
 		let tempMsg = 'div.' + e.target.name;
+		let updatedMsg = 'p.' + e.target.name;
 
 		if (tries[e.target.id] === passcodes[e.target.name]) {
+			$(updatedMsg).text('Unlocked');
 			$(tempMsg).addClass('top-unlock');
 			$(tempMsg).removeClass('top-locked');
 		}
